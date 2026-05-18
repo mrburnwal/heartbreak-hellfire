@@ -4,6 +4,17 @@ document.addEventListener('DOMContentLoaded', () => {
         createRain();
     }
 
+    // --- Mobile Keyboard Slide-up Fix ---
+    if (window.visualViewport) {
+        const adjustHeight = () => {
+            document.body.style.height = window.visualViewport.height + 'px';
+            const chatContainer = document.getElementById('chat-container');
+            if (chatContainer) chatContainer.scrollTop = chatContainer.scrollHeight;
+        };
+        window.visualViewport.addEventListener('resize', adjustHeight);
+        adjustHeight(); // Set initial
+    }
+
     // --- Chat Room Logic ---
     const chatInput = document.getElementById('chat-input');
     const sendBtn = document.getElementById('send-btn');
