@@ -49,6 +49,46 @@ body {
     animation: fadeIn 3s ease-in-out;
 }
 
+.fire-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flicker 0.2s infinite alternate;
+    margin-bottom: 1.5rem;
+    text-shadow: 
+        0 -2px 4px #fff,
+        0 -4px 10px #ff3,
+        0 -10px 20px #f90,
+        0 -20px 40px #c33;
+}
+
+@keyframes flicker {
+    0%, 100% {
+        text-shadow: 
+            0 -2px 4px #fff,
+            0 -4px 10px #ff3,
+            0 -10px 20px #f90,
+            0 -20px 40px #c33;
+    }
+    50% {
+        text-shadow: 
+            0 -2px 4px #fff,
+            0 -4px 10px #ff3,
+            0 -8px 20px #f90,
+            0 -15px 40px #c33;
+    }
+    25%, 75% {
+        text-shadow: 
+            0 -2px 4px #fff,
+            0 -4px 10px #ff3,
+            0 -12px 20px #f90,
+            0 -25px 40px #c33;
+    }
+}
+
 .dramatic-title {
     font-family: 'Cinzel', serif;
     font-size: 2.5rem;
@@ -394,8 +434,11 @@ body {
         padding: 2rem;
         width: 90%;
     }
+    .fire-logo {
+        font-size: 2.5rem;
+    }
     .dramatic-title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     .chat-controls {
         padding: 1rem;
