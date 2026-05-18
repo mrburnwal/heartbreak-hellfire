@@ -1,10 +1,10 @@
 :root {
-    --bg-dark: #050505;
-    --text-main: #e0e0e0;
-    --text-muted: #666;
-    --accent-red: #8b0000;
-    --accent-glow: #ff4500;
-    --glass-bg: rgba(20, 20, 20, 0.6);
+    --bg-dark: #0d0200;
+    --text-main: #ffeedd;
+    --text-muted: #b84a25;
+    --accent-red: #ff3300;
+    --accent-glow: #ff8800;
+    --glass-bg: rgba(40, 10, 0, 0.7);
 }
 
 * {
@@ -44,8 +44,8 @@ body {
     background: var(--glass-bg);
     padding: 4rem;
     border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.05);
-    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+    border: 1px solid rgba(255, 80, 0, 0.15);
+    box-shadow: 0 0 40px rgba(100, 20, 0, 0.8);
     backdrop-filter: blur(5px);
     animation: fadeIn 3s ease-in-out;
 }
@@ -148,9 +148,10 @@ body {
 }
 
 .enter-btn:hover {
-    background: rgba(255,255,255,0.05);
-    border-color: #fff;
-    box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    background: rgba(255, 50, 0, 0.1);
+    border-color: var(--accent-red);
+    color: var(--text-main);
+    box-shadow: 0 0 15px rgba(255, 50, 0, 0.2);
 }
 
 /* Room Elements */
@@ -184,8 +185,8 @@ body {
 .room-header {
     text-align: center;
     padding: 2rem;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    background: rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(255, 50, 0, 0.1);
+    background: rgba(20, 5, 0, 0.8);
     position: relative;
     z-index: 10;
 }
@@ -196,7 +197,7 @@ body {
 }
 
 .faded {
-    color: #333;
+    color: #5a2010;
 }
 
 .highlight-red {
@@ -241,13 +242,13 @@ body {
 .message {
     align-self: flex-end;
     max-width: 60%;
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 80, 0, 0.05);
     padding: 1rem 1.5rem;
     border-radius: 15px 15px 0 15px;
     font-size: 1.2rem;
     line-height: 1.5;
     animation: slideUp 0.5s ease-out;
-    border: 1px solid rgba(255,255,255,0.02);
+    border: 1px solid rgba(255, 80, 0, 0.1);
     word-wrap: break-word;
 }
 
@@ -267,7 +268,7 @@ body {
 
 .chat-controls {
     padding: 2rem;
-    background: linear-gradient(to top, #000, transparent);
+    background: linear-gradient(to top, #1a0500, transparent);
     position: relative;
     z-index: 10;
     display: flex;
@@ -279,10 +280,10 @@ body {
     display: flex;
     gap: 1rem;
     align-items: center;
-    background: rgba(20,20,20,0.8);
+    background: rgba(40, 10, 0, 0.8);
     padding: 0.5rem;
     border-radius: 30px;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 80, 0, 0.2);
 }
 
 #chat-input {
