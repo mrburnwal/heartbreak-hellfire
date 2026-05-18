@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Void - Ashes of Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+</head>
+<body class="room-body">
+    <canvas id="fire-canvas"></canvas>
+    <div id="burn-overlay"></div>
+
+    <header class="room-header">
+        <div class="room-title"><span class="faded">{{ user_name }}</span> &rarr; <span class="highlight-red">{{ ex_name }}</span></div>
+        <div class="room-subtitle">We are listening... Say everything.</div>
+    </header>
+
+    <main class="chat-container" id="chat-container">
+        <div class="void-message">You have entered the void. They cannot hear you.</div>
+        <div id="messages-area"></div>
+    </main>
+
+    <footer class="chat-controls">
+        <div class="input-area">
+            <button id="record-btn" class="icon-btn" title="Voice Note">🎤</button>
+            <input type="text" id="chat-input" placeholder="Type what you never got to say..." autocomplete="off">
+            <button id="send-btn" class="icon-btn">➤</button>
+        </div>
+        <div class="final-ritual">
+            <button id="burn-btn" class="burn-btn">Burn It All</button>
+        </div>
+    </footer>
+
+    <div id="final-screen" class="hidden">
+        <h2>Some things deserve to stay in ashes.</h2>
+        <button id="restart-btn" onclick="window.location.href='/'">Walk Away</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/fire.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

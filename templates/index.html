@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashes of Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+</head>
+<body class="landing-body">
+    <div id="rain-container"></div>
+    <div id="particles-container"></div>
+
+    <div class="landing-container">
+        <h1 class="dramatic-title">Some conversations never happen in real life.</h1>
+        <p class="subtitle">A silent void for the things you never got to say.</p>
+        
+        <form action="/enter" method="POST" class="entry-form">
+            <div class="input-group">
+                <input type="text" name="user_name" placeholder="Your Name" required autocomplete="off">
+            </div>
+            <div class="input-group">
+                <input type="text" name="ex_name" placeholder="Their Name" required autocomplete="off">
+            </div>
+            <button type="submit" class="enter-btn">Enter The Room</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
