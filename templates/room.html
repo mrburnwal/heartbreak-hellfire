@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Void - Heartbreak Hellfire</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
 </head>
+
 <body class="room-body">
     <canvas id="fire-canvas"></canvas>
     <div id="burn-overlay"></div>
 
     <header class="room-header">
-        <div class="room-title"><span class="faded">{{ user_name }}</span> &rarr; <span class="highlight-red">{{ ex_name }}</span></div>
+        <div class="room-title"><span class="faded">{{ user_name }}</span> &rarr; <span class="highlight-red">{{ ex_name
+                }}</span></div>
         <div class="room-subtitle">We are listening... Say everything.</div>
     </header>
 
@@ -35,9 +40,16 @@
     <div id="final-screen" class="hidden">
         <h2>Some things deserve to stay in ashes.</h2>
         <button id="restart-btn" onclick="window.location.href='/'">Walk Away</button>
+
+        <h3>If this made your heart ❤️ little lighter, you can support us to keep this project running!</h3>
+        <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
+            data-name="bmc-button" data-slug="mrburnwal" data-color="#FFDD00" data-emoji="" data-font="Cookie"
+            data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000"
+            data-coffee-color="#ffffff"></script>
     </div>
 
     <script src="{{ url_for('static', filename='js/fire.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
+
 </html>
